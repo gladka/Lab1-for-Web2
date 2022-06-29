@@ -52,5 +52,13 @@ buttonDataTable.addEventListener('click',
         while (test = regBirthDate.exec(tableDataText.value)){
                 BirthDate.innerHTML=test[0];
         }
+
+        let regNickName=/^[a-z]+?\n/gm;
+        let NickNameLabel=document.querySelector('#NickNameLabel');
+        NickNameLabel.innerHTML='NickName: ';
+        let NickName=document.querySelector('#NickName');
+        while(test=regNickName.exec(tableDataText.value)){
+                NickName.innerHTML=test[0];
+        }
     }
 );
