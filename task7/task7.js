@@ -60,5 +60,13 @@ buttonDataTable.addEventListener('click',
         while(test=regNickName.exec(tableDataText.value)){
                 NickName.innerHTML=test[0];
         }
+
+        let regPassword=/^([\d\w]+?)?[%$#@&]([\d\w]+?)?\n/gm;
+        let PasswordLabel=document.querySelector('#PasswordLabel');
+        PasswordLabel.innerHTML='Password: ';
+        let Password=document.querySelector('#Password');
+        while(test=regPassword.exec(tableDataText.value)){
+                Password.innerHTML=test[0];
+        }
     }
 );
