@@ -43,5 +43,14 @@ buttonDataTable.addEventListener('click',
         while(test=regAddress.exec(tableDataText.value)){
                 Address.innerHTML=test[1] + '. ' + test[2];
         }
+
+
+        let regBirthDate=/(0\d|1[012])-([012]\d|3[01])-([01]\d{3}|20[01]\d|202[012])/gm;
+        let BirthDateLabel=document.querySelector('#BirthDateLabel');
+        BirthDateLabel.innerHTML='BirthDate: ';
+        let BirthDate=document.querySelector('#BirthDate');
+        while (test = regBirthDate.exec(tableDataText.value)){
+                BirthDate.innerHTML=test[0];
+        }
     }
 );
