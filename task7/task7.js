@@ -68,5 +68,13 @@ buttonDataTable.addEventListener('click',
         while(test=regPassword.exec(tableDataText.value)){
                 Password.innerHTML=test[0];
         }
+
+        let regEmail=/^([\d\w]+?)?@([\d\w]+?)?.(\w+?)\n/gm;
+        let EmailLabel=document.querySelector('#EmailLabel');
+        EmailLabel.innerHTML='Email: ';
+        let Email= document.querySelector('#Email');
+        while(test=regEmail.exec(tableDataText.value)){
+                Email.innerHTML=test[0];
+        }
     }
 );
