@@ -26,6 +26,14 @@ buttonDataTable.addEventListener('click',
             FirstName.innerHTML = part[0];
             LastName.innerHTML = part[1];
         }
-        index = 0;
+
+        let regGender=/^(F?e?[Mm]ale)$/gm;
+        regGender.lastIndex=0;
+        let GenderLabel=document.querySelector('#GenderLabel');
+        GenderLabel.innerHTML='Gender: ';
+        let Gender=document.querySelector('#Gender');
+        while(test=regGender.exec(tableDataText.value)){
+             Gender.innerHTML=test[0];
+        }
     }
 );
