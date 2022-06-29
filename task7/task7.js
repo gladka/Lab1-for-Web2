@@ -35,5 +35,13 @@ buttonDataTable.addEventListener('click',
         while(test=regGender.exec(tableDataText.value)){
              Gender.innerHTML=test[0];
         }
+
+        let regAddress=/(\d+? .+?\n)(.+?\n)/gm;
+        let AddressLabel=document.querySelector('#AddressLabel');
+        AddressLabel.innerHTML='Address: ';
+        let Address=document.querySelector('#Address');
+        while(test=regAddress.exec(tableDataText.value)){
+                Address.innerHTML=test[1] + '. ' + test[2];
+        }
     }
 );
